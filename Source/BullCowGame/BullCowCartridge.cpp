@@ -73,15 +73,12 @@ void UBullCowCartridge::SetupGame()
     ExtractWordsFromFile();
     validWords = GetValidWords(possibleWords);
     hiddenWord = validWords[FMath::RandRange(0, validWords.Num() - 1)];
-    //PrintLine(TEXT("There are %i possible words"), possibleWords.Num());
-    //PrintLine(TEXT("There are %i valid words"), validWords.Num());
     lives = hiddenWord.Len() * 2;
     isGameOver = false;
     PrintLine(TEXT("Welcome to Bull Cows!"));
     PrintLine(TEXT("Guess the %i letter word"), hiddenWord.Len());
     PrintLine(TEXT("You have %i lives"), lives);
     PrintLine(TEXT("Type in your guess and \npress enter to continue"));
-    PrintLine(TEXT("The hidden word is %s"), *hiddenWord);
 }
 
 void UBullCowCartridge::ExtractWordsFromFile()
