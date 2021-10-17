@@ -75,7 +75,7 @@ void UBullCowCartridge::SetupGame()
     hiddenWord = validWords[FMath::RandRange(0, validWords.Num() - 1)];
     lives = hiddenWord.Len() * 2;
     isGameOver = false;
-    PrintLine(TEXT("Welcome to Bull Cows!"));
+    PrintLine(TEXT("Welcome to Guess The Word!"));
     PrintLine(TEXT("Guess the %i letter word"), hiddenWord.Len());
     PrintLine(TEXT("You have %i lives"), lives);
     PrintLine(TEXT("Type in your guess and \npress enter to continue"));
